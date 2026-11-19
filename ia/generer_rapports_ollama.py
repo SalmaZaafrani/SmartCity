@@ -1,7 +1,7 @@
 """
 Generateur de rapports IA — Smart City Neo-Sousse 2030
 Fonctionne AVEC ou SANS base de donnees (mode simule)
-Lancez : python generer_rapports.py
+Lancez : python ia/generer_rapports_ollama.py  (nécessite Ollama)
 """
 
 import requests

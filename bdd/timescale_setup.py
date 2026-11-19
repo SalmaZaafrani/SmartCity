@@ -11,15 +11,10 @@ import psycopg2
 import psycopg2.extras
 from contextlib import contextmanager
 
-# ── Config BD directe (port 5434, password salma) ──
-DB_CONFIG = {
-    "host":            "localhost",
-    "port":            5434,
-    "dbname":          "smartcity",
-    "user":            "postgres",
-    "password":        "salma",
-    "client_encoding": "utf8"
-}
+# ── Config BD commune (bdd/db_config.py + .env) ──
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from db_config import DB_CONFIG as _BASE_CONFIG
+DB_CONFIG = {**_BASE_CONFIG, "client_encoding": "utf8"}
 
 @contextmanager
 def get_cursor():

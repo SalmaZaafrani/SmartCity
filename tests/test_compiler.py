@@ -6,7 +6,7 @@ Smart City Neo-Sousse 2030
 import os
 import sys
 
-sys.path.insert(0, os.path.dirname(__file__))
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'compilateur'))
 
 from compiler import NLCompiler
 

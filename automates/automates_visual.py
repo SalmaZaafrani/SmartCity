@@ -11,7 +11,8 @@ import os
 import json
 
 base = os.path.dirname(os.path.abspath(__file__))
-sys.path.insert(0, os.path.join(base, 'bdd'))
+parent = os.path.dirname(base)
+sys.path.insert(0, os.path.join(parent, 'bdd'))
 from db_config import get_cursor
 
 

@@ -3,20 +3,29 @@ DATABASE CONFIG — Connexion PostgreSQL Smart City
 Base : smartcity | User : postgres | Host : localhost
 """
 
+import os
 import psycopg2
 import psycopg2.extras
 from contextlib import contextmanager
+
+try:
+    from dotenv import load_dotenv
+    # .env à la racine du projet
+    load_dotenv(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), ".env"))
+except ImportError:
+    pass
 
 # ─────────────────────────────────────────────
 # Configuration de connexion
 # ─────────────────────────────────────────────
 
+# Valeurs lues depuis le fichier .env (voir .env.example)
 DB_CONFIG = {
-    "host":     "localhost",
-    "port":     5434,
-    "dbname":   "smartcity",
-    "user":     "postgres",
-    "password": "salma"
+    "host":     os.getenv("DB_HOST", "localhost"),
+    "port":     int(os.getenv("DB_PORT", "5434")),
+    "dbname":   os.getenv("DB_NAME", "smartcity"),
+    "user":     os.getenv("DB_USER", "postgres"),
+    "password": os.getenv("DB_PASSWORD", "salma"),
 }
 
 # ─────────────────────────────────────────────

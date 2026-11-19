@@ -17,16 +17,10 @@ from datetime import datetime
 # ─────────────────────────────────────────
 # CONFIGURATION
 # ─────────────────────────────────────────
-OPENAI_API_KEY = "OPENAI_API_KEY"
-
-
-DB_CONFIG = {
-    "dbname":   "smartcity",
-    "user":     "postgres",
-    "password": "salma",
-    "host":     "localhost",
-    "port":     "5434"
-}
+import os
+import sys
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'bdd'))
+from db_config import DB_CONFIG  # config commune (bdd/db_config.py + .env)
 
 
 # ─────────────────────────────────────────

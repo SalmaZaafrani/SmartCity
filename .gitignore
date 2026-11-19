@@ -55,3 +55,7 @@ Thumbs.db
 *.log
 *.sqlite3
 db.sqlite3
+
+# Fichiers générés par automates/automates_visual.py
+automates/automates_visual.html
+automates/automate_*.svg

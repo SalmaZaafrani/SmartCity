@@ -19,7 +19,6 @@ sys.path.insert(0, base)
 sys.path.insert(0, parent)
 sys.path.insert(0, os.path.join(parent, 'bdd'))
 sys.path.insert(0, os.path.join(parent, 'compilateur'))
-sys.path.insert(0, os.path.join(parent, 'db'))
 
 from flask import Flask, request, jsonify, make_response
 from flask_cors import CORS

@@ -3,7 +3,7 @@ AUTOMATES_DB.PY — Intégration des automates avec PostgreSQL
 Connecte les 3 automates (capteur, intervention, véhicule) à la base smartcity.
 
 Usage :
-    python automates_db.py
+    python automates/automates_db.py
 """
 
 import sys
@@ -12,7 +12,8 @@ import datetime
 
 # Ajouter les dossiers nécessaires au path
 base = os.path.dirname(os.path.abspath(__file__))
-sys.path.insert(0, os.path.join(base, 'bdd'))
+parent = os.path.dirname(base)
+sys.path.insert(0, os.path.join(parent, 'bdd'))
 
 from transitions import Machine
 from db_config import get_cursor, test_connection

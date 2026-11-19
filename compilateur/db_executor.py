@@ -14,8 +14,9 @@ import os
 
 # Ajouter tous les sous-dossiers au path
 base = os.path.dirname(os.path.abspath(__file__))
-sys.path.insert(0, os.path.join(base, 'compilateur'))
-sys.path.insert(0, os.path.join(base, 'bdd'))
+parent = os.path.dirname(base)
+sys.path.insert(0, base)
+sys.path.insert(0, os.path.join(parent, 'bdd'))
 
 from typing import List, Dict, Any, Optional
 from dataclasses import dataclass

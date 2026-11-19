@@ -9,7 +9,7 @@ Couvre :
 - Performances du système
 
 Usage :
-    python scenarios_test.py
+    python tests/scenarios.py
 """
 
 import sys
@@ -18,6 +18,7 @@ import time
 import datetime
 
 base = os.path.dirname(os.path.abspath(__file__))
+base = os.path.dirname(base)  # racine du projet
 sys.path.insert(0, os.path.join(base, 'compilateur'))
 sys.path.insert(0, os.path.join(base, 'bdd'))
 

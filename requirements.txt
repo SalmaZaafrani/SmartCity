@@ -1,0 +1,8 @@
+flask
+flask-cors
+flask-socketio
+psycopg2-binary
+transitions
+openai
+python-dotenv
+requests

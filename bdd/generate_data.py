@@ -8,7 +8,7 @@ import random
 import datetime
 
 base = os.path.dirname(os.path.abspath(__file__))
-sys.path.insert(0, os.path.join(base, 'bdd'))
+sys.path.insert(0, base)
 
 from db_config import get_cursor, test_connection
 
